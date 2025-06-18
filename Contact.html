@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact-Page</title>
+    <link rel="icon" type="image/png" href="./Images/Img_2.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header,
+        footer {
+            background-color: #1d232c;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        .contact-info,
+        .contact-form,
+        .map {
+            margin-bottom: 40px;
+        }
+
+        .contact-info p,
+        .contact-info i {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .contact-info i {
+            margin-right: 10px;
+            color: #333;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #555;
+        }
+
+        .social-icons i {
+            margin: 10px;
+            font-size: 30px;
+            color: #333;
+        }
+
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <h1>Nastra</h1>
+
+        <div class="navbar-links">
+            <p class="navbar-links"><a href="./index.html">Home</a></p>
+            <p class="navbar-links"><a href="./collection.html">Collections</a></p>
+            <p class="navbar-links"><a href="./Contact.html">Contact</a></p>
+
+            <!-- Fixed toggle icon -->
+            <div class="nav-bar-toogle" onclick="show_nav_bar()">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Side-nav Bar -->
+    <div class="side-navbar">
+        <p style="text-align: right;" onclick="close_nav_bar()">
+            <i class="fa fa-times" aria-hidden="true"></i>
+        </p>
+        <div class="side-navbarlinks">
+            <p class="side-navbar-link"><a href="./index.html">Home</a></p>
+            <p class="side-navbar-link"><a href="./collection.html">Collections</a></p>
+            <p class="side-navbar-link"><a href="./Contact.html">Contact</a></p>
+        </div>
+    </div>
+
+    <header>
+        <h1>Contact Us</h1>
+        <p>We’d love to hear from you!</p>
+    </header>
+
+    <div class="container">
+
+        <div class="contact-info">
+            <h2>Our Office</h2>
+            <p><i class="fas fa-map-marker-alt"></i>123 Fashion Street, Chennai, India</p>
+            <p><i class="fas fa-phone"></i>+91 98765 43210</p>
+            <p><i class="fas fa-envelope"></i>support@nostra.com</p>
+        </div>
+
+        <div class="contact-form">
+            <h2>Send a Message</h2>
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Your Full Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="text" name="subject" placeholder="Subject">
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <div class="map">
+            <h2>Find Us on Map</h2>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1950.0499971980375!2d80.25000000000001!3d13.082680000000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267a8dff1d5ef%3A0xa2e3894df91b183b!2sChennai!5e0!3m2!1sen!2sin!4v1689824573321"
+                allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+
+
+
+    </div>
+
+
+
+
+    <footer class="fotter">
+        <div class="fotter-container">
+            <h2 class="fotter-box-1">Nostra</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora dolores magnam cupiditate necessitatibus
+                culpa sapiente quia ratione dolor voluptas! Soluta!</p>
+            <div class="social-icons">
+                <h2>Connect With Us</h2>
+                <a href="#"><i class="fab fa-facebook" style="color: white;"></i></a>
+                <a href="#"><i class="fab fa-instagram" style="color: white;"></i></a>
+                <a href="#"><i class="fab fa-twitter" style="color: white;"></i></a>
+                <a href="#"><i class="fab fa-whatsapp" style="color: white;"></i></a>
+            </div>
+        </div>
+
+        <p>@ Nostra -2025 & I_G-Karthi</p>
+    </footer>
+</body>
+
+</html>

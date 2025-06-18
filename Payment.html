@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dress Payment</title>
+    <link rel="icon" type="image/png" href="./Images/Img_2.png">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #3020c5, #3fb0e0);
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .payment-container {
+            background: white;
+            padding: 30px 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            width: 350px;
+            position: relative;
+            animation: cardSlideIn 1.5s ease-in-out;
+        }
+
+        h2 {
+            text-align: center;
+            color: #3020c5;
+            margin-bottom: 30px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            margin-bottom: 15px;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            border-color: #3020c5;
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            background: #3020c5;
+            color: white;
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        button:hover {
+            background: #3020c5;
+            transform: scale(1.03);
+        }
+
+        .success-animation {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 22px;
+            color: green;
+            animation: successFade 1s ease-in-out forwards;
+        }
+
+        /* Unique Card Slide Animation */
+        @keyframes cardSlideIn {
+            0% {
+                transform: rotateY(90deg) translateY(-200px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: rotateY(0deg) translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes successFade {
+            0% {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1.1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="payment-container">
+        <h2>Payment Details</h2>
+        <form id="paymentForm">
+            <label for="cardName">Card Holder Name</label>
+            <input type="text" id="cardName" placeholder="Full Name" required>
+
+            <label for="cardNumber">Card Number</label>
+            <input type="text" id="cardNumber" placeholder="XXXX-XXXX-XXXX-XXXX" maxlength="19" required>
+
+            <label for="expiry">Expiry Date</label>
+            <input type="text" id="expiry" placeholder="MM/YY" required>
+
+            <label for="cvv">CVV</label>
+            <input type="password" id="cvv" maxlength="4" placeholder="123" required>
+
+            <button type="submit"><i class="fas fa-credit-card"></i> Pay Now</button>
+
+            <div class="success-animation" id="paymentSuccess">
+                ✅ Payment Successful!
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const form = document.getElementById("paymentForm");
+        const successMsg = document.getElementById("paymentSuccess");
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            successMsg.style.display = "block";
+
+            // Optional: reset form
+            form.reset();
+
+            // Auto-hide message
+            setTimeout(() => {
+                successMsg.style.display = "none";
+            }, 4000);
+        });
+    </script>
+
+</body>
+
+</html>

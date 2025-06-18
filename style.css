@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee+Tint&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Playwrite+IT+Moderna:wght@100..400&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tagesschrift&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Oswald", sans-serif;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    font-size: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.navbar-links{
+    display: flex;
+    column-gap: 25px;
+}
+
+.navbar-links a{
+    text-decoration: none;
+    color: black;
+}
+
+.navbar-links a:hover{
+    text-decoration: underline;
+    color: black;
+    
+}
+
+.nav-bar-toogle{
+    display: none;
+}
+
+/* Sidenav-Bar */
+
+.side-navbar{
+    background-color: #1d232c;
+    width: 40%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-size: 25px;
+    padding: 20px;
+    color: white;
+    display: none;    
+}
+
+.side-navbar-link{
+    margin-bottom: 30px;
+}
+
+.side-navbar-link a{
+    color: white;
+    text-decoration: none;
+}
+
+.side-navbar-link a:hover{
+    text-decoration: underline;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 50px;
+}
+
+.header-Button{
+    padding-left: 20px;
+    padding-right:20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.service{
+    padding: 20px;
+}
+
+.service-container-1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.service-container-2{
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.service-container-2 div{
+    background-color: #cbcbcb;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.new-arrival{
+    gap: 100px;
+    margin-top: 50px;
+    margin-left: 50px;
+    display: flex;
+    flex-wrap: wrap;          
+    gap: 20px;   
+    padding: 20px;
+    justify-content: center;  
+}
+
+
+.new-arrival-container button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  display: block;
+  margin-left: 40px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 20px;
+}
+
+.new-arrival-container{
+    text-align: center;
+
+}
+
+.new-arrival-container img{
+    margin-top: 20px;
+    margin-left: 10px;
+    border-radius: 10px;             
+
+}
+
+.news{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.news input{
+    padding: 11px;
+    width: 80vw;
+    margin-bottom: 10px;
+    border: solid black 3px;
+}
+
+.news button{
+    color: #F2F4F7;
+    background-color: #1D232C;
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+.fotter{
+    margin-top: 20px;
+    padding: 40px;
+    background-color: #1d232c;
+    color: white;
+    line-height: 50px;
+}
+
+#search{
+    background-color: transparent;
+}
+
+.product-section{
+    margin-top: 20px;
+}
+
+.product-search{
+    width: 80%;
+    border: solid 2px black;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: auto;
+}
+
+.product-search input{
+    border: none;
+    background-color: transparent;
+    width: 100%;
+}
+
+.product-search input:focus{
+    outline:none;
+}
+
+.products{
+    padding: 20px;
+    display: flex;
+    gap:10px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Media Query */
+
+@media (max-width:700px) {
+
+.nav-bar-toogle{
+    display: block;
+}
+
+.navbar-links a{
+   display: none;
+}
+
+.header-image{
+   display: none;
+}
+
+.service-container-1{
+    display: none;
+}
+
+.service-container-2{
+    flex-direction: column;
+}
+
+
+}
